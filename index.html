@@ -11,8 +11,10 @@
 <body>
 
     <div id="app">
-        <h1 v-bind:class="colore"> {{message}}</h1>
-        <img :src="link" alt="">
+        <input type="text"  v-model="utente" placeholder="Inserisci il tuo nome">
+        <h1 v-bind:class="colore"> {{message}} {{utente}} utente numero: {{numeroUtente}} </h1>
+        <button @click="generaImmagine">Genera immagine</button>
+        <img :class="dimensione" :src="link" alt="">
     </div>
 
    <script src="./js/script.js"></script>
